@@ -2,7 +2,7 @@
 name: cf-mysql-java-broker-cluster
 director_uuid: 53e56169-85eb-428f-b2ef-04caf08525bb
 releases:
-- name: cf-mysql-java-broker-boshrelease
+- name: cf-mysql-java-broker
   version: latest
 compilation:
   workers: 3
