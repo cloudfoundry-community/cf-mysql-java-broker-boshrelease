@@ -2,7 +2,4 @@
 blobstore:
   provider: s3
   options:
-    bucket_name: kuppas-bosh-blobs
-    access_key_id: READONLY_AWS_ACCESS_KEY
-    secret_access_key: READONLY_AWS_SECRET_ACCESS_KEY
-    encryption_key: PERSONAL_RANDOM_KEY
+    bucket_name: cf-mysql-java-broker-boshrelease
