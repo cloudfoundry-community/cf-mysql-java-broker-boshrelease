@@ -1,0 +1,10 @@
+GRANT ALL PRIVILEGES ON *.* TO '<%= p('mysql.admin_username') %>'@'%' WITH GRANT OPTION;
+UPDATE mysql.user SET Password=PASSWORD('<%= p('mysql.admin_password') %>') WHERE User='<%= p('mysql.admin_username') %>';
+DELETE FROM mysql.user WHERE User='';
+
+FLUSH PRIVILEGES;
+
+SET GLOBAL fast_index_creation=false;
+
+-- For now, provide credentials from this db
+-- DROP DATABASE IF EXISTS test;

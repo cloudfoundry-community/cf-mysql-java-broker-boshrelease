@@ -1,0 +1,5 @@
+check process mysql_broker
+  with pidfile /var/vcap/sys/run/mysql_broker/mysql_broker.pid
+  start program "/var/vcap/jobs/mysql_broker/bin/monit_debugger mysql_broker_ctl '/var/vcap/jobs/mysql_broker/bin/mysql_broker_ctl start'"
+  stop program "/var/vcap/jobs/mysql_broker/bin/monit_debugger mysql_broker_ctl '/var/vcap/jobs/mysql_broker/bin/mysql_broker_ctl stop'"
+  group vcap

@@ -19,3 +19,14 @@ sed -i '' -e "s/DIRECTOR_UUID/$(bosh status | grep UUID | awk '{print $2}')/" lo
 bosh deployment local-cluster.yml
 bosh -n deploy
 ```
+
+Register the broker with cf
+```
+cf create-service-broker mysql-java-broker cc secret http://10.244.0.18
+```
+
+Create Service
+
+
+Bind Service
+

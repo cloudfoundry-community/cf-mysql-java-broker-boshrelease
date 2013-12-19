@@ -1,0 +1,23 @@
+---
+name: mysql_broker
+packages: 
+- mysql_broker
+- java7
+templates:
+  bin/mysql_broker_ctl: bin/mysql_broker_ctl
+  bin/monit_debugger: bin/monit_debugger
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+  config/mysql_broker.yml.erb: config/mysql_broker.yml
+properties:
+  mysql.admin_username:
+    description: 'Username for the MySQL server admin user'
+    default: 'root'
+  mysql.admin_password:
+    description: 'Password for the MySQL server admin user'
+  mysql.port:
+    description: 'Port the mysql server should bind to'
+    default: 3306
+  mysql.host:
+    description: 'Host where mysql server is running'

@@ -1,0 +1,7 @@
+---
+name: mysql_broker
+dependencies: 
+- java7
+files:
+- mysql_broker/**/*
+

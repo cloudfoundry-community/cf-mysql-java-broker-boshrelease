@@ -1,0 +1,26 @@
+---
+name: mysql
+
+templates:
+  mysql_ctl.erb:  bin/mysql_ctl
+  my.cnf.erb:     config/my.cnf
+  mysql_init.erb: config/mysql_init
+
+packages:
+- mysql
+
+properties:
+  mysql.admin_username:
+    description: 'Username for the MySQL server admin user'
+    default: 'root'
+  mysql.admin_password:
+    description: 'Password for the MySQL server admin user'
+  mysql.port:
+    description: 'Port the mysql server should bind to'
+    default: 3306
+  mysql.max_connections:
+    description: 'Maximum total number of database connections for the node'
+  mysql.max_user_connections:
+    description: 'Max # of connections allowed for each user (binding)'
+  mysql.innodb_buffer_pool_size:
+    description: 'The size in bytes of the memory buffer InnoDB uses to cache data and indexes of its tables'

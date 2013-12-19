@@ -1,0 +1,3 @@
+[submodule "src/mysql_broker"]
+	path = src/mysql_broker
+	url = git@github.com:cloudfoundry-community/cf-mysql-java-broker
